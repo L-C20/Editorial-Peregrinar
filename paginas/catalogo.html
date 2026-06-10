@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editorial Peregrinar | Catalogo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body data-page="catalogo">
+    <header class="site-header">
+      <nav class="navbar" aria-label="Navegacion principal">
+        <a class="brand" href="../index.html" aria-label="Editorial Peregrinar inicio">
+          <img src="../assets/editorial-peregrinar-logo.jpeg" alt="Logo Editorial Peregrinar" />
+          <span>Editorial Peregrinar</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="nav-links">
+          <a href="../index.html" data-page-link="inicio">Inicio</a>
+          <a href="nosotros.html" data-page-link="nosotros">Nosotros</a>
+          <a href="catalogo.html" data-page-link="catalogo">Catalogo</a>
+          <a href="trabajos-personalizados.html" data-page-link="personalizados">Trabajos personalizados</a>
+          <a href="promociones.html" data-page-link="promociones">Promociones</a>
+          <a href="galeria.html" data-page-link="galeria">Galeria</a>
+          <a href="preguntas-frecuentes.html" data-page-link="faq">Preguntas frecuentes</a>
+          <a href="contacto.html" data-page-link="contacto">Contacto</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section page-hero">
+        <p class="eyebrow">Catalogo</p>
+        <h1>Productos organizados por categoria.</h1>
+        <p>Edita, duplica o elimina tarjetas para cargar tus productos reales.</p>
+      </section>
+
+      <section class="section catalog">
+        <div class="filter-tabs" aria-label="Filtros de catalogo">
+          <button class="filter-btn active" type="button" data-filter="todos">Todos</button>
+          <button class="filter-btn" type="button" data-filter="infantiles">Libros infantiles</button>
+          <button class="filter-btn" type="button" data-filter="adultos">Libros para adultos</button>
+          <button class="filter-btn" type="button" data-filter="papeleria">Papeleria</button>
+          <button class="filter-btn" type="button" data-filter="agendas">Agendas</button>
+          <button class="filter-btn" type="button" data-filter="combos">Combos</button>
+          <button class="filter-btn" type="button" data-filter="novedades">Novedades</button>
+        </div>
+
+        <div class="product-grid catalog-grid">
+          <article class="product-card" data-category="infantiles novedades">
+            <div class="product-image product-book"></div>
+            <div class="product-content">
+              <span class="tag">Infantiles</span>
+              <h3>Libro infantil destacado</h3>
+              <p>Descripcion breve del producto, edad sugerida o tematica.</p>
+              <strong>$00.000</strong>
+              <a class="btn btn-small" href="https://wa.me/5491112345678?text=Hola,%20quiero%20consultar%20por%20un%20libro%20infantil" target="_blank" rel="noreferrer">Comprar o consultar</a>
+            </div>
+          </article>
+          <article class="product-card" data-category="adultos">
+            <div class="product-image product-adult"></div>
+            <div class="product-content">
+              <span class="tag">Adultos</span>
+              <h3>Libro para adultos</h3>
+              <p>Descripcion breve del titulo, genero o recomendacion.</p>
+              <strong>$00.000</strong>
+              <a class="btn btn-small" href="https://wa.me/5491112345678?text=Hola,%20quiero%20consultar%20por%20libros%20para%20adultos" target="_blank" rel="noreferrer">Comprar o consultar</a>
+            </div>
+          </article>
+          <article class="product-card" data-category="papeleria">
+            <div class="product-image product-paper"></div>
+            <div class="product-content">
+              <span class="tag">Papeleria</span>
+              <h3>Set de papeleria</h3>
+              <p>Anotadores, stickers, senaladores y accesorios creativos.</p>
+              <strong>$00.000</strong>
+              <a class="btn btn-small" href="https://wa.me/5491112345678?text=Hola,%20quiero%20consultar%20por%20papeleria" target="_blank" rel="noreferrer">Comprar o consultar</a>
+            </div>
+          </article>
+          <article class="product-card" data-category="agendas personalizados">
+            <div class="product-image product-agenda"></div>
+            <div class="product-content">
+              <span class="tag">Agendas</span>
+              <h3>Agenda personalizada</h3>
+              <p>Incluye opciones de tapa, nombre, color y organizacion interior.</p>
+              <strong>$00.000</strong>
+              <a class="btn btn-small" href="https://wa.me/5491112345678?text=Hola,%20quiero%20consultar%20por%20agendas%20personalizadas" target="_blank" rel="noreferrer">Comprar o consultar</a>
+            </div>
+          </article>
+          <article class="product-card" data-category="combos promociones">
+            <div class="product-image product-combo"></div>
+            <div class="product-content">
+              <span class="tag">Combos</span>
+              <h3>Combo especial</h3>
+              <p>Propuesta armada para regalo, fecha especial o compra completa.</p>
+              <strong>$00.000</strong>
+              <a class="btn btn-small" href="https://wa.me/5491112345678?text=Hola,%20quiero%20consultar%20por%20combos%20especiales" target="_blank" rel="noreferrer">Comprar o consultar</a>
+            </div>
+          </article>
+          <article class="product-card" data-category="novedades">
+            <div class="product-image product-new"></div>
+            <div class="product-content">
+              <span class="tag">Novedades</span>
+              <h3>Novedad del mes</h3>
+              <p>Espacio para cargar lanzamientos, reposiciones o productos nuevos.</p>
+              <strong>$00.000</strong>
+              <a class="btn btn-small" href="https://wa.me/5491112345678?text=Hola,%20quiero%20consultar%20por%20novedades" target="_blank" rel="noreferrer">Comprar o consultar</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <a class="whatsapp-float" href="https://wa.me/5491112345678" target="_blank" rel="noreferrer" aria-label="Consultar por WhatsApp">WA</a>
+    <footer class="footer"><p>Editorial Peregrinar. Libros, papeleria y personalizados.</p></footer>
+    <script src="../script.js"></script>
+  </body>
+</html>

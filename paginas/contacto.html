@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editorial Peregrinar | Contacto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body data-page="contacto">
+    <header class="site-header">
+      <nav class="navbar" aria-label="Navegacion principal">
+        <a class="brand" href="../index.html" aria-label="Editorial Peregrinar inicio">
+          <img src="../assets/editorial-peregrinar-logo.jpeg" alt="Logo Editorial Peregrinar" />
+          <span>Editorial Peregrinar</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="nav-links">
+          <a href="../index.html" data-page-link="inicio">Inicio</a>
+          <a href="nosotros.html" data-page-link="nosotros">Nosotros</a>
+          <a href="catalogo.html" data-page-link="catalogo">Catalogo</a>
+          <a href="trabajos-personalizados.html" data-page-link="personalizados">Trabajos personalizados</a>
+          <a href="promociones.html" data-page-link="promociones">Promociones</a>
+          <a href="galeria.html" data-page-link="galeria">Galeria</a>
+          <a href="preguntas-frecuentes.html" data-page-link="faq">Preguntas frecuentes</a>
+          <a href="contacto.html" data-page-link="contacto">Contacto</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section page-hero">
+        <p class="eyebrow">Contacto</p>
+        <h1>Hacenos tu consulta o pedido.</h1>
+        <p>Completa el formulario o escribi directamente por WhatsApp.</p>
+      </section>
+
+      <section class="section contact">
+        <div class="contact-copy">
+          <p class="eyebrow">Canales</p>
+          <h2>Comunicacion directa con clientes.</h2>
+          <p>
+            Agrega aqui redes sociales, correo electronico, ubicacion o cualquier canal que quieras mostrar.
+          </p>
+          <div class="contact-links">
+            <a href="https://wa.me/5491112345678" target="_blank" rel="noreferrer">WhatsApp</a>
+            <a href="mailto:editorialperegrinar@email.com">editorialperegrinar@email.com</a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
+          </div>
+        </div>
+
+        <form class="contact-form">
+          <label>
+            Nombre
+            <input type="text" name="name" placeholder="Tu nombre" required />
+          </label>
+          <label>
+            Email o telefono
+            <input type="text" name="contact" placeholder="Como te respondemos?" required />
+          </label>
+          <label>
+            Mensaje
+            <textarea name="message" rows="5" placeholder="Quiero consultar por..." required></textarea>
+          </label>
+          <button class="btn btn-primary" type="submit">Enviar consulta</button>
+          <p class="form-message" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <a class="whatsapp-float" href="https://wa.me/5491112345678" target="_blank" rel="noreferrer" aria-label="Consultar por WhatsApp">WA</a>
+    <footer class="footer"><p>Editorial Peregrinar. Libros, papeleria y personalizados.</p></footer>
+    <script src="../script.js"></script>
+  </body>
+</html>
