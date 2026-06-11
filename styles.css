@@ -177,14 +177,14 @@ h3 {
 h1 {
   margin-bottom: 18px;
   color: var(--violet-dark);
-  font-size: clamp(3rem, 9vw, 6.5rem);
+  font-size: clamp(3rem, 9vw, 5.5rem);
   line-height: 0.92;
 }
 
 h2 {
   margin-bottom: 16px;
   color: var(--violet-dark);
-  font-size: clamp(2rem, 4.4vw, 3.35rem);
+  font-size: clamp(2rem, 4.4vw, 2.35rem);
   line-height: 1.05;
 }
 
@@ -259,22 +259,25 @@ p {
 }
 
 .hero-logo::before {
-  content: "";
+  
   position: absolute;
   width: min(82vw, 510px);
   aspect-ratio: 1;
   border-radius: 50%;
   background: var(--pink);
   box-shadow: var(--shadow);
+  background-color: var(--cream);
 }
 
 .hero-logo img {
   position: relative;
   width: min(70vw, 390px);
   aspect-ratio: 1;
-  border-radius: 50%;
+  border-radius: 100%;
   object-fit: cover;
   box-shadow: 0 18px 38px rgba(43, 36, 64, 0.2);
+  background-color: #fffdf7;
+  
 }
 
 .intro-strip,
@@ -430,7 +433,7 @@ details,
 .about,
 .contact,
 .custom-layout {
-  display: grid;
+  
   grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
   align-items: start;
   gap: 36px;
