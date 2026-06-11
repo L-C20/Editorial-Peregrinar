@@ -132,6 +132,7 @@ select {
 }
 
 .section {
+  display: grid;
   width: min(1180px, calc(100% - 32px));
   margin: 0 auto;
   padding: 76px 0;
@@ -154,7 +155,7 @@ select {
   margin: 0 0 14px;
   color: var(--violet);
   font-family: "Fredoka", Arial, sans-serif;
-  font-size: 0.82rem;
+  font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0;
   text-transform: uppercase;
@@ -184,7 +185,7 @@ h1 {
 h2 {
   margin-bottom: 16px;
   color: var(--violet-dark);
-  font-size: clamp(2rem, 4.4vw, 2.35rem);
+  font-size: clamp(2rem, 4.4vw, 1.35rem);
   line-height: 1.05;
 }
 
