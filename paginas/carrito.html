@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Editorial Peregrinar | Carrito</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="../styles.css">
+
+  <link rel="icon" type="image/png" href="../assets/Fondo-EP.png">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <nav class="navbar">
+
+      <a class="brand" href="../index.html">
+        <img src="../assets/FondoEditorial.png" alt="Logo Editorial Peregrinar">
+        <span>Editorial Peregrinar</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="../index.html">Inicio</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="trabajos-personalizados.html">Personalizados</a>
+        <a href="promociones.html">Promociones</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+
+      <a href="carrito.html" class="carrito-nav">
+        🛒 Mi Carrito
+        <span id="contador-carrito">0</span>
+      </a>
+
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="section page-hero">
+
+      <p class="eyebrow">Carrito</p>
+
+      <h1>Tu selección de productos</h1>
+
+      <p>
+        Revisa los artículos antes de enviar tu pedido por WhatsApp.
+      </p>
+
+      <div id="lista-carrito" class="carrito-lista"></div>
+
+      <h2 id="total-carrito">Total: $0</h2>
+
+      <div class="acciones-carrito">
+
+        <button
+          id="vaciar-carrito"
+          class="btn btn-secondary">
+          Vaciar carrito
+        </button>
+
+        <a
+          id="enviar-whatsapp"
+          class="btn btn-primary"
+          href="#">
+          Enviar pedido
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Editorial Peregrinar. Libros, papelería y personalizados.</p>
+
+    <div class="footer-links">
+      <a href="galeria.html">Galería</a>
+      <a href="preguntas-frecuentes.html">Preguntas frecuentes</a>
+    </div>
+  </footer>
+
+  <script src="../carrito.js"></script>
+
+</body>
+</html>

@@ -11,27 +11,37 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../styles.css" />
+    <link rel="icon" type="image/png" href="../assets/Fondo-EP.png">
   </head>
   <body data-page="nosotros">
-    <header class="site-header">
+  <header class="site-header">
       <nav class="navbar" aria-label="Navegacion principal">
-        <a class="brand" href="../index.html" aria-label="Editorial Peregrinar inicio">
-          <img src="../assets/editorial-peregrinar-logo.jpeg" alt="Logo Editorial Peregrinar" />
+
+        <a class="brand" href="../index.html">
+          <img src="../assets/FondoEditorial.png" alt="Logo Editorial Peregrinar" />
           <span>Editorial Peregrinar</span>
         </a>
-        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links">
-          <span></span><span></span><span></span>
+
+        <button class="menu-toggle" type="button" aria-label="Abrir menu">
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
+
         <div class="nav-links" id="nav-links">
-          <a href="../index.html" data-page-link="inicio">Inicio</a>
-          <a href="nosotros.html" data-page-link="nosotros">Nosotros</a>
-          <a href="catalogo.html" data-page-link="catalogo">Catalogo</a>
-          <a href="trabajos-personalizados.html" data-page-link="personalizados">Trabajos personalizados</a>
-          <a href="promociones.html" data-page-link="promociones">Promociones</a>
-          <a href="galeria.html" data-page-link="galeria">Galeria</a>
-          <a href="preguntas-frecuentes.html" data-page-link="faq">Preguntas frecuentes</a>
-          <a href="contacto.html" data-page-link="contacto">Contacto</a>
+          <a href="../index.html">Inicio</a>
+          <a href="catalogo.html">Catálogo</a>
+          <a href="trabajos-personalizados.html">Personalizados</a>
+          <a href="promociones.html">Promociones</a>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="contacto.html">Contacto</a>
         </div>
+
+        <a href="carrito.html" class="carrito-nav">
+          🛒 Mi Carrito
+          <span id="contador-carrito">0</span>
+        </a>
+
       </nav>
     </header>
 
@@ -74,7 +84,8 @@ Crear productos de papelería artesanal con buena estética, diseños funcionale
           </article>
         </div>
       </section>
-
+      
+  <div class="promo-grid">  
       <section class="section workspace-section">
         <div class="section-heading">
           <p class="eyebrow">Equipo o espacio</p>
@@ -83,6 +94,29 @@ Crear productos de papelería artesanal con buena estética, diseños funcionale
         </div>
         <div class="gallery-item item-agendas"><figcaption>Espacio para foto</figcaption></div>
       </section>
+        <article>
+      <span>Galería</span>
+      <h3>Nuestros productos</h3>
+      <p>
+        Explora imágenes de libros, agendas,
+        personalizados y trabajos realizados.
+      </p>
+      <a href="paginas/galeria.html" class="btn btn-primary">
+        Ver galería
+      </a>
+    </article>
+    <article>
+      <span>Ayuda</span>
+      <h3>Preguntas frecuentes</h3>
+      <p>
+        Resuelve dudas sobre pedidos,
+        personalizaciones, envíos y pagos.
+      </p>
+      <a href="paginas/preguntas-frecuentes.html" class="btn btn-primary">
+        Ver preguntas
+      </a>
+    </article>
+  </div>
     </main>
 
     <a class="whatsapp-float" href="https://wa.me/5492613846766" target="_blank" rel="noreferrer" aria-label="Consultar por WhatsApp">WA</a>

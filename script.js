@@ -60,3 +60,40 @@ forms.forEach((form) => {
     form.reset();
   });
 });
+
+document.querySelectorAll(".agregar-carrito").forEach((boton) => {
+
+  boton.addEventListener("click", () => {
+
+    const carrito =
+      JSON.parse(localStorage.getItem("carrito")) || [];
+
+    carrito.push({
+  nombre: boton.dataset.producto,
+  precio: boton.dataset.precio
+});
+
+    localStorage.setItem(
+      "carrito",
+      JSON.stringify(carrito)
+    );
+    actualizarContadorCarrito();
+
+    console.log("Producto agregado");
+  });
+
+});
+
+function actualizarContadorCarrito() {
+
+  const contador = document.getElementById("contador-carrito");
+
+  if (!contador) return;
+
+  const carrito =
+    JSON.parse(localStorage.getItem("carrito")) || [];
+
+  contador.textContent = carrito.length;
+}
+
+actualizarContadorCarrito();
