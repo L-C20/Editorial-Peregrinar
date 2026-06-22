@@ -21,7 +21,7 @@
     <!-- HEADER (igual que inicio) -->
     <header class="site-header">
       <nav class="navbar" aria-label="Navegacion principal">
-
+    
         <a class="brand" href="../index.html">
           <img src="../assets/FondoEditorial.png" alt="Logo Editorial Peregrinar" />
           <span>Editorial Peregrinar</span>
@@ -44,7 +44,6 @@
 
         <a href="carrito.html" class="carrito-nav">
           🛒 Mi Carrito
-          <span id="contador-carrito">0</span>
         </a>
 
       </nav>
@@ -71,52 +70,94 @@
         </div>
 
         <div class="product-grid catalog-grid">
+
 <article class="product-card" data-category="infantiles novedades">
-  <div class="product-image product-book"></div>
+  
+
   <div class="product-content">
+
+     <div class="carousel">
+    <img src="../assets/libretas.png" class="slide" alt="Lapiceras decoradas">
+    <img src="../assets/libretas2.jpeg" class="slide" alt="Libreta 2">
+    <img src="../assets/libretas3.jpeg" class="slide" alt="Libreta 3">
+  </div>
     <span class="tag">Infantiles</span>
-    <h3>Libro infantil destacado</h3>
-    <p>Historia ilustrada para niños.</p>
-    <strong>$10.000</strong>
+    <h3>Libreta decorada, tapa flexible de 40 hojas.</h3>
+    <p>Tamaño 15 cm x 10 cm. Interior liso/rayas/punteado.</p>
+    <strong>$4.499</strong>
+
+    <!-- CONTADOR -->
+    <div class="cantidad">
+      <button class="btn-cantidad" onclick="restar(this)">-</button>
+      <span class="contador">1</span>
+      <button class="btn-cantidad" onclick="sumar(this)">+</button>
+    </div>
 
     <button
       class="btn btn-primary agregar-carrito"
       data-producto="Libro infantil destacado"
       data-precio="10000">
+      
       Agregar al carrito
     </button>
+
   </div>
 </article>
 
 <article class="product-card" data-category="adultos">
-  <div class="product-image product-adult"></div>
+  
   <div class="product-content">
-    <span class="tag">Adultos</span>
-    <h3>Libro para adultos</h3>
-    <p>Novela y literatura variada.</p>
-    <strong>$12.000</strong>
+      <div class="carousel">
+    <img src="../assets/lapiceras.jpeg" class="slide" alt="Lapiceras decoradas">
+    <img src="../assets/lapiceras1.jpeg" class="slide" alt="Lapiceras 1">
+    <img src="../assets/lapiceras2.jpeg" class="slide" alt="Lapiceras 2">
+  </div>
+    <span class="tag">Papelería</span>
+    <h3>Lapiceras decoradas</h3>
+    <p>Tinta azul, negra, roja, y demás.</p>
+    <strong>$1790 c/u</strong>
+
+    <div class="cantidad">
+      <button class="btn-cantidad" onclick="restar(this)">-</button>
+      <span class="contador">1</span>
+      <button class="btn-cantidad" onclick="sumar(this)">+</button>
+    </div>
 
     <button
       class="btn btn-primary agregar-carrito"
       data-producto="Libro para adultos"
       data-precio="12000">
+      
       Agregar al carrito
     </button>
   </div>
 </article>
 
 <article class="product-card" data-category="papeleria">
-  <div class="product-image product-paper"></div>
+ 
+   <div class="carousel">
+    
+    <img src="../assets/lapices.jpeg" class="slide" alt="Lapices decorados">
+    <img src="../assets/lapices1.jpeg" class="slide" alt="Lapices 1">
+    <img src="../assets/lapices2.jpeg" class="slide" alt="Lapices 2">
+  </div>
   <div class="product-content">
     <span class="tag">Papelería</span>
-    <h3>Set de papelería</h3>
+    <h3>Lapices decorados</h3>
     <p>Anotadores, stickers y accesorios.</p>
     <strong>$8.000</strong>
+
+    <div class="cantidad">
+      <button class="btn-cantidad" onclick="restar(this)">-</button>
+      <span class="contador">1</span>
+      <button class="btn-cantidad" onclick="sumar(this)">+</button>
+    </div>
 
     <button
       class="btn btn-primary agregar-carrito"
       data-producto="Set de papelería"
       data-precio="8000">
+      
       Agregar al carrito
     </button>
   </div>
@@ -129,6 +170,12 @@
     <h3>Agenda personalizada</h3>
     <p>Diseño a medida con tu nombre.</p>
     <strong>$15.000</strong>
+
+    <div class="cantidad">
+      <button class="btn-cantidad" onclick="restar(this)">-</button>
+      <span class="contador">1</span>
+      <button class="btn-cantidad" onclick="sumar(this)">+</button>
+    </div>
 
     <button
       class="btn btn-primary agregar-carrito"
@@ -147,6 +194,12 @@
     <p>Libro + papelería + sorpresa.</p>
     <strong>$20.000</strong>
 
+    <div class="cantidad">
+      <button class="btn-cantidad" onclick="restar(this)">-</button>
+      <span class="contador">1</span>
+      <button class="btn-cantidad" onclick="sumar(this)">+</button>
+    </div>
+
     <button
       class="btn btn-primary agregar-carrito"
       data-producto="Combo especial regalo"
@@ -163,6 +216,12 @@
     <h3>Novedad del mes</h3>
     <p>Lanzamiento especial disponible.</p>
     <strong>$11.000</strong>
+
+    <div class="cantidad">
+      <button class="btn-cantidad" onclick="restar(this)">-</button>
+      <span class="contador">1</span>
+      <button class="btn-cantidad" onclick="sumar(this)">+</button>
+    </div>
 
     <button
       class="btn btn-primary agregar-carrito"
@@ -193,4 +252,4 @@
     <!-- JS -->
     <script src="../script.js"></script>
   </body>
-</html>
+</html> 

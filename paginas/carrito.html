@@ -40,7 +40,6 @@
 
       <a href="carrito.html" class="carrito-nav">
         🛒 Mi Carrito
-        <span id="contador-carrito">0</span>
       </a>
 
     </nav>
@@ -50,17 +49,16 @@
 
     <section class="section page-hero">
 
-      <p class="eyebrow">Carrito</p>
-
-      <h1>Tu selección de productos</h1>
+      <h1>Mi Carrito</h1>
 
       <p>
         Revisa los artículos antes de enviar tu pedido por WhatsApp.
       </p>
 
       <div id="lista-carrito" class="carrito-lista"></div>
-
-      <h2 id="total-carrito">Total: $0</h2>
+      <div class="total-fijo">
+        <h2 id="total-carrito">Total: $0</h2>
+      </div>
 
       <div class="acciones-carrito">
 
@@ -93,6 +91,8 @@
   </footer>
 
   <script src="../carrito.js"></script>
-
+<div id="cart-total-float">
+  Total: $0
+</div>
 </body>
 </html>

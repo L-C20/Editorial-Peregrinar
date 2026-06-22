@@ -1,3 +1,7 @@
 {
+<<<<<<< HEAD
     "markdown.preview.markEditorSelection": true
+=======
+    "livePreview.defaultPreviewPath": "/Editorial Peregrinar/index.html"
+>>>>>>> ea1082ec8f37356cc96c3b247681442e5b57f004
 }
