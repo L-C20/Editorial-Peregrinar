@@ -223,6 +223,14 @@ function iniciarCarruseles() {
     const slides = carousel.querySelectorAll(".slide");
     let index = 0;
 
+    if (!slides.length) return;
+
+    // IMPORTANTE: inicializar estado
+    slides.forEach((s, i) => {
+      s.classList.remove("active");
+      if (i === 0) s.classList.add("active");
+    });
+
     setInterval(() => {
 
       slides[index].classList.remove("active");
@@ -231,10 +239,71 @@ function iniciarCarruseles() {
 
       slides[index].classList.add("active");
 
-    }, 3000); // cada 3 segundos
+    }, 3000);
 
   });
 }
 
 // iniciar cuando carga la página
 document.addEventListener("DOMContentLoaded", iniciarCarruseles);
+const buttons = document.querySelectorAll(".filter-btn");
+const items = document.querySelectorAll(".product-card");
+
+buttons.forEach(btn => {
+  btn.addEventListener("click", () => {
+
+    // quitar activo
+    buttons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    const filter = btn.dataset.filter;
+
+    items.forEach(item => {
+      const category = item.dataset.category;
+
+      if (filter === "todos" || category === filter) {
+        item.style.display = "block";
+      } else {
+        item.style.display = "none";
+      }
+    });
+
+  });
+});
+
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+if (menuToggle && navLinks) {
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const carousel = document.querySelector(".carousel1");
+  if (!carousel) return;
+
+  const slides = carousel.querySelectorAll(".slide1");
+  if (!slides.length) return;
+
+  let index = 0;
+
+  // estado inicial seguro
+  slides.forEach((s, i) => {
+    s.classList.remove("active");
+    if (i === 0) s.classList.add("active");
+  });
+
+  setInterval(() => {
+
+    slides[index].classList.remove("active");
+
+    index = (index + 1) % slides.length;
+
+    slides[index].classList.add("active");
+
+  }, 3000);
+
+});
