@@ -71,7 +71,7 @@
 
         <div class="product-grid catalog-grid">
 
-<article class="product-card" data-category="infantiles novedades">
+<article class="product-card" data-category="infantiles novedades" tabindex="0">
   
 
   <div class="product-content">
@@ -95,8 +95,8 @@
 
     <button
       class="btn btn-primary agregar-carrito"
-      data-producto="Libro infantil destacado"
-      data-precio="10000">
+      data-producto="Libreta decorada"
+      data-precio="4499">
       
       Agregar al carrito
     </button>
@@ -104,7 +104,7 @@
   </div>
 </article>
 
-<article class="product-card" data-category="adultos">
+<article class="product-card" data-category="adultos" tabindex="0">
   
   <div class="product-content">
       <div class="carousel">
@@ -125,15 +125,15 @@
 
     <button
       class="btn btn-primary agregar-carrito"
-      data-producto="Libro para adultos"
-      data-precio="12000">
+      data-producto="Lapiceras decoradas"
+      data-precio="1790">
       
       Agregar al carrito
     </button>
   </div>
 </article>
 
-<article class="product-card" data-category="papeleria">
+<article class="product-card" data-category="papeleria" tabindex="0">
  
  <div class="product-content">
 
@@ -154,15 +154,15 @@
 
     <button
       class="btn btn-primary agregar-carrito"
-      data-producto="Set de papelería"
-      data-precio="8000">
+      data-producto="Lapices decorados"
+      data-precio="799">
       
       Agregar al carrito
     </button>
   </div>
 </article>
 
-<article class="product-card" data-category="agendas">
+<article class="product-card" data-category="agendas" tabindex="0">
   <div class="product-image product-agenda"></div>
   <div class="product-content">
     <span class="tag">Agendas</span>
@@ -185,7 +185,7 @@
   </div>
 </article>
 
-<article class="product-card" data-category="combos promociones">
+<article class="product-card" data-category="combos promociones" tabindex="0">
   <div class="product-image product-combo"></div>
   <div class="product-content">
     <span class="tag">Combos</span>
@@ -208,7 +208,7 @@
   </div>
 </article>
 
-<article class="product-card" data-category="novedades">
+<article class="product-card" data-category="novedades" tabindex="0">
   <div class="product-image product-new"></div>
   <div class="product-content">
     <span class="tag">Novedades</span>
@@ -234,6 +234,36 @@
         </div>
       </section>
 
+      <div class="product-modal" id="product-modal" aria-hidden="true">
+        <div class="product-modal-backdrop" data-close-modal></div>
+        <article class="product-modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-product-title">
+          <button class="modal-close" type="button" aria-label="Cerrar detalle" data-close-modal>×</button>
+
+          <div class="modal-gallery" id="modal-gallery">
+            <button class="modal-arrow modal-prev" type="button" aria-label="Imagen anterior">‹</button>
+            <div class="modal-slides" id="modal-slides"></div>
+            <button class="modal-arrow modal-next" type="button" aria-label="Imagen siguiente">›</button>
+          </div>
+
+          <div class="modal-product-info">
+            <span class="tag" id="modal-product-tag"></span>
+            <h2 id="modal-product-title"></h2>
+            <strong id="modal-product-price"></strong>
+            <p id="modal-product-detail"></p>
+
+            <div class="cantidad modal-cantidad">
+              <button class="btn-cantidad" type="button" id="modal-restar">-</button>
+              <span class="contador" id="modal-contador">1</span>
+              <button class="btn-cantidad" type="button" id="modal-sumar">+</button>
+            </div>
+
+            <button class="btn btn-primary" type="button" id="modal-agregar-carrito">
+              Agregar al carrito
+            </button>
+          </div>
+        </article>
+      </div>
+
     </main>
 
     <!-- WHATSAPP -->
@@ -251,4 +281,4 @@
     <!-- JS -->
     <script src="../script.js"></script>
   </body>
-</html> 
+</html>
