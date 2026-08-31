@@ -1,0 +1,813 @@
+:root {
+  --violet: #6e4aa0;
+  --violet-dark: #4d317b;
+
+  --pink: #e2b2c5;
+  --pink-soft: #f7e6ee;
+
+  --cream: #fbf8f2;
+  --paper: #fffdf9;
+  --white: #ffffff;
+
+  --ink: #2b2440;
+  --muted: #6c6379;
+
+  --line: rgba(77, 49, 123, 0.12);
+
+  --sidebar: #2f2550;
+  --sidebar-hover: rgba(255, 255, 255, 0.08);
+
+  --shadow: 0 10px 30px rgba(77, 49, 123, 0.07);
+}
+
+
+/* =========================================================
+   BASE
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  min-height: 100vh;
+
+  color: var(--ink);
+
+  background: var(--cream);
+
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.admin-sidebar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  z-index: 20;
+
+  width: 250px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  padding: 24px 16px;
+
+  color: #fff;
+
+  background: var(--sidebar);
+
+  box-shadow:
+    8px 0 30px rgba(43, 36, 64, 0.08);
+}
+
+
+/* =========================================================
+   MARCA
+========================================================= */
+
+.admin-brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 4px 8px 26px;
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.10);
+}
+
+.admin-brand img {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  background: #fff;
+
+  box-shadow:
+    0 5px 16px rgba(0, 0, 0, 0.12);
+}
+
+.admin-brand div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 1px;
+}
+
+.admin-brand strong {
+  font-family: "Libre Baskerville", Georgia, serif;
+
+  font-size: 0.92rem;
+
+  font-weight: 700;
+}
+
+.admin-brand span {
+  color: rgba(255, 255, 255, 0.68);
+
+  font-size: 0.72rem;
+
+  letter-spacing: 0.03em;
+}
+
+
+/* =========================================================
+   NAVEGACIÓN
+========================================================= */
+
+.admin-nav {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+
+  padding-top: 24px;
+}
+
+.admin-nav-title {
+  margin: 12px 10px 7px;
+
+  color: rgba(255, 255, 255, 0.42);
+
+  font-size: 0.64rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+}
+
+.admin-nav-link {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  min-height: 42px;
+
+  padding: 0 11px;
+
+  border-radius: 8px;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 0.82rem;
+
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.admin-nav-link span {
+  width: 20px;
+
+  display: grid;
+
+  place-items: center;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 1rem;
+}
+
+.admin-nav-link:hover {
+  color: #fff;
+
+  background: var(--sidebar-hover);
+
+  transform: translateX(2px);
+}
+
+.admin-nav-link.active {
+  color: #fff;
+
+  background: rgba(226, 178, 197, 0.18);
+
+  box-shadow:
+    inset 3px 0 0 var(--pink);
+}
+
+.admin-nav-link.active span {
+  color: var(--pink);
+}
+
+
+/* =========================================================
+   FOOTER SIDEBAR
+========================================================= */
+
+.admin-sidebar-footer {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+
+  margin-top: auto;
+
+  padding-top: 18px;
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.10);
+}
+
+.view-store,
+.logout-button {
+  width: 100%;
+
+  min-height: 38px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 8px;
+
+  font-size: 0.76rem;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.view-store {
+  color: rgba(255, 255, 255, 0.82);
+
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.view-store:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.logout-button {
+  color: rgba(255, 255, 255, 0.48);
+
+  background: transparent;
+}
+
+.logout-button:hover {
+  color: #fff;
+
+  background: rgba(255, 255, 255, 0.05);
+}
+
+
+/* =========================================================
+   CONTENIDO PRINCIPAL
+========================================================= */
+
+.admin-main {
+  min-height: 100vh;
+
+  margin-left: 250px;
+
+  padding: 42px 46px 70px;
+}
+
+
+/* =========================================================
+   TOPBAR
+========================================================= */
+
+.admin-topbar {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 42px;
+}
+
+.admin-eyebrow {
+  margin: 0 0 7px;
+
+  color: var(--violet);
+
+  font-size: 0.66rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+.admin-topbar h1 {
+  margin: 0;
+
+  color: var(--violet-dark);
+
+  font-family: "Libre Baskerville", Georgia, serif;
+
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+
+  line-height: 1.15;
+}
+
+.admin-subtitle {
+  margin: 8px 0 0;
+
+  color: var(--muted);
+
+  font-size: 0.88rem;
+}
+
+
+/* =========================================================
+   USUARIO
+========================================================= */
+
+.admin-user {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 7px 10px 7px 7px;
+
+  border: 1px solid var(--line);
+
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.admin-avatar {
+  width: 34px;
+  height: 34px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 50%;
+
+  color: #fff;
+
+  background: var(--violet);
+
+  font-size: 0.78rem;
+
+  font-weight: 800;
+}
+
+.admin-user div:last-child {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 1px;
+}
+
+.admin-user strong {
+  font-size: 0.76rem;
+}
+
+.admin-user span {
+  color: var(--muted);
+
+  font-size: 0.65rem;
+}
+
+
+/* =========================================================
+   SECCIONES
+========================================================= */
+
+.dashboard-section {
+  margin-bottom: 38px;
+}
+
+.section-title {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  margin-bottom: 16px;
+}
+
+.section-title h2 {
+  margin: 0;
+
+  color: var(--violet-dark);
+
+  font-family: "Libre Baskerville", Georgia, serif;
+
+  font-size: 1.35rem;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================================
+   ESTADÍSTICAS
+========================================================= */
+
+.stats-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 14px;
+}
+
+.stat-card {
+  display: flex;
+
+  flex-direction: column;
+
+  min-height: 135px;
+
+  padding: 20px;
+
+  border: 1px solid var(--line);
+
+  border-radius: 10px;
+
+  background: var(--paper);
+
+  box-shadow: var(--shadow);
+}
+
+.stat-label {
+  color: var(--muted);
+
+  font-size: 0.68rem;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.06em;
+}
+
+.stat-number {
+  margin-top: 12px;
+
+  color: var(--violet-dark);
+
+  font-family: "Libre Baskerville", Georgia, serif;
+
+  font-size: 1.9rem;
+}
+
+.stat-status {
+  margin-top: 12px;
+
+  color: #4c8b65;
+
+  font-size: 1.25rem;
+
+  font-weight: 800;
+}
+
+.stat-description {
+  margin-top: auto;
+
+  color: var(--muted);
+
+  font-size: 0.68rem;
+}
+
+
+/* =========================================================
+   ACCIONES RÁPIDAS
+========================================================= */
+
+.quick-actions {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 14px;
+}
+
+.quick-action {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 18px;
+
+  border: 1px solid var(--line);
+
+  border-radius: 10px;
+
+  background: var(--paper);
+
+  box-shadow: var(--shadow);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.quick-action:hover {
+  transform: translateY(-2px);
+
+  border-color:
+    rgba(110, 74, 160, 0.22);
+
+  box-shadow:
+    0 15px 35px rgba(77, 49, 123, 0.10);
+}
+
+.quick-icon {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 9px;
+
+  color: var(--violet-dark);
+
+  background: var(--pink-soft);
+
+  font-size: 1.25rem;
+
+  font-weight: 500;
+}
+
+.quick-action div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.quick-action strong {
+  color: var(--ink);
+
+  font-size: 0.8rem;
+}
+
+.quick-action span:not(.quick-icon) {
+  color: var(--muted);
+
+  font-size: 0.68rem;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   ESTADO DE LA TIENDA
+========================================================= */
+
+.store-status {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  padding: 26px;
+
+  border: 1px solid var(--line);
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--paper),
+      #fff9fc
+    );
+
+  box-shadow: var(--shadow);
+}
+
+.store-status h2 {
+  margin: 0 0 7px;
+
+  color: var(--violet-dark);
+
+  font-family: "Libre Baskerville", Georgia, serif;
+
+  font-size: 1.35rem;
+}
+
+.store-status p:last-child {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 0.78rem;
+}
+
+
+/* =========================================================
+   BOTÓN PRINCIPAL
+========================================================= */
+
+.admin-primary-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 42px;
+
+  padding: 0 18px;
+
+  flex-shrink: 0;
+
+  border-radius: 8px;
+
+  color: #fff;
+
+  background: var(--violet);
+
+  font-size: 0.76rem;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 8px 20px rgba(77, 49, 123, 0.16);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.admin-primary-button:hover {
+  background: var(--violet-dark);
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .admin-main {
+    padding: 34px 28px 60px;
+  }
+
+  .stats-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .quick-actions {
+    grid-template-columns:
+      1fr;
+  }
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 760px) {
+
+  .admin-sidebar {
+    position: relative;
+
+    width: 100%;
+
+    min-height: auto;
+
+    padding: 16px;
+  }
+
+  .admin-brand {
+    padding-bottom: 16px;
+  }
+
+  .admin-nav {
+    display: grid;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 5px;
+
+    padding-top: 16px;
+  }
+
+  .admin-nav-title {
+    grid-column: 1 / -1;
+
+    margin-top: 8px;
+  }
+
+  .admin-sidebar-footer {
+    margin-top: 18px;
+  }
+
+  .admin-main {
+    margin-left: 0;
+
+    padding: 28px 16px 50px;
+  }
+
+  .admin-topbar {
+    flex-direction: column;
+
+    margin-bottom: 32px;
+  }
+
+  .admin-user {
+    width: 100%;
+  }
+
+  .stats-grid {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+  .store-status {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .admin-primary-button {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .stats-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+  .admin-nav {
+    grid-template-columns:
+      1fr;
+  }
+
+  .admin-nav-title {
+    margin-top: 12px;
+  }
+}

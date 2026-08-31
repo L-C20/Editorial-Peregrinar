@@ -1,0 +1,2144 @@
+/* =========================================================
+   PRODUCTOS
+   EDITORIAL PEREGRINAR
+========================================================= */
+
+.products-section {
+  display: grid;
+  gap: 22px;
+}
+
+
+/* =========================================================
+   ENCABEZADO / BOTÓN NUEVO PRODUCTO
+========================================================= */
+
+.admin-topbar .admin-primary-button {
+  flex-shrink: 0;
+
+  min-height: 46px;
+
+  padding: 0 20px;
+
+  border: 1px solid var(--violet);
+
+  border-radius: 8px;
+
+  color: #fff;
+
+  background: var(--violet);
+
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 0.84rem;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(77, 49, 123, 0.15);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.admin-topbar .admin-primary-button:hover {
+  background: var(--violet-dark);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 26px rgba(77, 49, 123, 0.20);
+}
+
+
+/* =========================================================
+   TOOLBAR
+========================================================= */
+
+.products-toolbar {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 18px 20px;
+
+  border: 1px solid var(--line);
+
+  border-radius: 10px;
+
+  background: var(--paper);
+
+  box-shadow:
+    0 8px 25px rgba(77, 49, 123, 0.05);
+}
+
+
+/* =========================================================
+   CONTADOR
+========================================================= */
+
+.products-count {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: var(--muted);
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 0.82rem;
+
+  font-weight: 600;
+}
+
+.products-count strong {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 28px;
+  height: 28px;
+
+  padding: 0 8px;
+
+  border-radius: 50%;
+
+  color: #fff;
+
+  background: var(--violet);
+
+  font-size: 0.72rem;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   BUSCADOR
+========================================================= */
+
+.products-search {
+  width: min(330px, 100%);
+}
+
+.products-search input {
+  width: 100%;
+
+  min-height: 42px;
+
+  margin: 0;
+
+  padding: 0 14px;
+
+  border: 1px solid rgba(77, 49, 123, 0.14);
+
+  border-radius: 8px;
+
+  color: var(--ink);
+
+  background: #fff;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 0.82rem;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.products-search input::placeholder {
+  color: #9a93a4;
+}
+
+.products-search input:focus {
+  border-color: var(--violet);
+
+  box-shadow:
+    0 0 0 4px rgba(110, 74, 160, 0.10);
+}
+
+
+/* =========================================================
+   TABLA
+========================================================= */
+
+.products-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+
+  border: 1px solid var(--line);
+
+  border-radius: 10px;
+
+  background: var(--paper);
+
+  box-shadow:
+    0 10px 30px rgba(77, 49, 123, 0.06);
+}
+
+.products-table {
+  width: 100%;
+
+  min-width: 900px;
+
+  border-collapse: collapse;
+}
+
+
+/* =========================================================
+   CABECERA
+========================================================= */
+
+.products-table thead {
+  background: rgba(226, 178, 197, 0.12);
+}
+
+.products-table th {
+  padding: 14px 18px;
+
+  border-bottom: 1px solid var(--line);
+
+  color: var(--violet-dark);
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 0.68rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+
+  text-align: left;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   CELDAS
+========================================================= */
+
+.products-table td {
+  padding: 16px 18px;
+
+  border-bottom: 1px solid rgba(77, 49, 123, 0.07);
+
+  color: var(--muted);
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 0.82rem;
+
+  vertical-align: middle;
+}
+
+.products-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.products-table tbody tr {
+  transition:
+    background 0.18s ease;
+}
+
+.products-table tbody tr:hover {
+  background: rgba(247, 230, 238, 0.28);
+}
+
+
+/* =========================================================
+   PRODUCTO
+========================================================= */
+
+.product-table-name {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  min-width: 230px;
+}
+
+.product-table-image {
+  position: relative;
+
+  width: 48px;
+  height: 48px;
+
+  flex: 0 0 48px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(77, 49, 123, 0.10);
+
+  border-radius: 8px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.4),
+      transparent 45%
+    ),
+    linear-gradient(
+      135deg,
+      var(--pink),
+      var(--blue)
+    );
+}
+
+.product-table-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.product-table-name strong {
+  display: block;
+
+  max-width: 240px;
+
+  color: var(--violet-dark);
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 0.84rem;
+
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   CATEGORÍA
+========================================================= */
+
+.product-category {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 5px 9px;
+
+  border-radius: 5px;
+
+  color: var(--violet-dark);
+
+  background: var(--pink-soft);
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 0.64rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.04em;
+}
+
+
+/* =========================================================
+   PRECIO
+========================================================= */
+
+.product-price {
+  color: var(--violet-dark) !important;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 0.86rem !important;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   ESTADO
+========================================================= */
+
+.product-status {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  min-height: 26px;
+
+  padding: 4px 9px;
+
+  border-radius: 20px;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 0.64rem;
+
+  font-weight: 700;
+}
+
+.product-status::before {
+  content: "";
+
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+}
+
+.product-status.available {
+  color: #376b4b;
+
+  background: rgba(86, 164, 113, 0.11);
+}
+
+.product-status.available::before {
+  background: #56a471;
+}
+
+.product-status.unavailable {
+  color: #87504f;
+
+  background: rgba(190, 102, 98, 0.10);
+}
+
+.product-status.unavailable::before {
+  background: #be6662;
+}
+
+
+/* =========================================================
+   DESTACADO / NOVEDAD
+========================================================= */
+
+.product-badge {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 32px;
+
+  min-height: 26px;
+
+  padding: 4px 9px;
+
+  border-radius: 20px;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 0.64rem;
+
+  font-weight: 700;
+}
+
+.product-badge.yes {
+  color: var(--violet-dark);
+
+  background: rgba(226, 178, 197, 0.30);
+}
+
+.product-badge.no {
+  color: var(--muted);
+
+  background: rgba(108, 99, 121, 0.07);
+}
+
+/* =========================================================
+   ACCIONES
+========================================================= */
+
+.table-actions {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-start;
+
+  gap: 6px;
+}
+
+
+.table-action {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+
+  padding: 0;
+
+  border: 1px solid rgba(77, 49, 123, 0.13);
+
+  border-radius: 7px;
+
+  color: var(--violet-dark);
+
+  background: #fff;
+
+  cursor: pointer;
+
+  transition:
+    background 0.18s ease,
+    border-color 0.18s ease,
+    color 0.18s ease,
+    transform 0.18s ease;
+}
+
+
+.table-action svg {
+  width: 16px;
+  height: 16px;
+
+  fill: none;
+
+  stroke: currentColor;
+
+  stroke-width: 1.8;
+
+  stroke-linecap: round;
+
+  stroke-linejoin: round;
+}
+
+
+.table-action:hover {
+  color: var(--violet-dark);
+
+  background: var(--pink-soft);
+
+  border-color:
+    rgba(110, 74, 160, 0.22);
+
+  transform: translateY(-1px);
+}
+
+.table-action.btn-eliminar-producto {
+  color: #8f5555;
+}
+
+.table-action.btn-eliminar-producto:hover {
+  color: #8b4141;
+
+  background:
+    rgba(190, 102, 98, 0.08);
+
+  border-color:
+    rgba(190, 102, 98, 0.20);
+}
+
+/* =========================================================
+   CARGANDO
+========================================================= */
+
+.products-loading {
+  height: 150px;
+
+  color: var(--muted) !important;
+
+  text-align: center !important;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 0.82rem !important;
+}
+
+
+/* =========================================================
+   ESTADO VACÍO
+========================================================= */
+
+.products-empty {
+  display: grid;
+
+  place-items: center;
+
+  padding: 58px 30px;
+
+  border: 1px solid var(--line);
+
+  border-radius: 10px;
+
+  background: var(--paper);
+
+  box-shadow:
+    0 10px 30px rgba(77, 49, 123, 0.06);
+
+  text-align: center;
+}
+
+.products-empty-icon {
+  display: grid;
+
+  place-items: center;
+
+  width: 54px;
+  height: 54px;
+
+  margin-bottom: 18px;
+
+  border-radius: 50%;
+
+  color: #fff;
+
+  background: var(--violet);
+
+  font-size: 1.35rem;
+
+  box-shadow:
+    0 10px 24px rgba(77, 49, 123, 0.16);
+}
+
+.products-empty h2 {
+  margin-bottom: 8px;
+
+  color: var(--violet-dark);
+
+  font-family: "Libre Baskerville", Georgia, serif;
+
+  font-size: 1.35rem;
+}
+
+.products-empty p {
+  max-width: 430px;
+
+  margin-bottom: 22px;
+
+  color: var(--muted);
+
+  font-size: 0.88rem;
+}
+
+
+/* =========================================================
+   BOTÓN DEL ESTADO VACÍO
+========================================================= */
+
+.products-empty .admin-primary-button {
+  min-height: 44px;
+
+  padding: 0 18px;
+
+  border: 1px solid var(--violet);
+
+  border-radius: 8px;
+
+  color: #fff;
+
+  background: var(--violet);
+
+  font-size: 0.8rem;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(77, 49, 123, 0.14);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.products-empty .admin-primary-button:hover {
+  background: var(--violet-dark);
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .admin-topbar {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .admin-topbar .admin-primary-button {
+    width: 100%;
+  }
+
+  .products-toolbar {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    padding: 17px;
+  }
+
+  .products-search {
+    width: 100%;
+  }
+
+}
+
+
+@media (max-width: 560px) {
+
+  .products-table-wrapper {
+    border-radius: 8px;
+  }
+
+  .products-table th,
+  .products-table td {
+    padding: 13px 14px;
+  }
+
+  .product-table-name {
+    min-width: 210px;
+  }
+
+  .product-table-image {
+    width: 44px;
+    height: 44px;
+
+    flex-basis: 44px;
+  }
+
+}
+/* =========================================================
+   MODAL PRODUCTO
+========================================================= */
+
+.product-modal {
+  position: fixed;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  box-sizing: border-box;
+
+  z-index: 9999;
+
+  background: transparent;
+}
+
+.product-modal[hidden] {
+  display: none;
+}
+
+
+/* =========================================================
+   FONDO
+========================================================= */
+
+.product-modal-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(43, 36, 64, 0.45);
+
+  backdrop-filter: blur(4px);
+
+  cursor: default;
+}
+
+
+/* =========================================================
+   TARJETA
+========================================================= */
+
+.product-modal-card {
+  position: relative;
+
+  z-index: 1;
+
+  width: min(680px, calc(100vw - 48px));
+
+  max-height: calc(100vh - 48px);
+
+  overflow-y: auto;
+
+  box-sizing: border-box;
+
+  padding: 30px;
+
+  border: 1px solid var(--line);
+
+  border-radius: 14px;
+
+  background: var(--paper);
+
+  box-shadow:
+    0 25px 70px rgba(43, 36, 64, 0.20);
+
+  animation: productModalIn 0.22s ease;
+}
+
+
+/* =========================================================
+   MODAL VER PRODUCTO
+========================================================= */
+
+.product-view-modal {
+  width: min(760px, calc(100vw - 48px));
+}
+
+
+/* =========================================================
+   ANIMACIÓN
+========================================================= */
+
+@keyframes productModalIn {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(10px)
+      scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+
+}
+
+
+/* =========================================================
+   ENCABEZADO
+========================================================= */
+
+.product-modal-header {
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 28px;
+
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid var(--line);
+}
+
+.product-modal-header .admin-eyebrow {
+  margin-bottom: 6px;
+}
+
+.product-modal-header h2 {
+  margin: 0;
+
+  color: var(--violet-dark);
+
+  font-family:
+    "Libre Baskerville",
+    Georgia,
+    serif;
+
+  font-size: 1.45rem;
+
+  line-height: 1.2;
+}
+
+.product-modal-header p:last-child {
+  margin: 7px 0 0;
+
+  color: var(--muted);
+
+  font-size: 0.76rem;
+}
+
+
+/* =========================================================
+   BOTÓN CERRAR
+========================================================= */
+
+.product-modal-close {
+  width: 34px;
+  height: 34px;
+
+  flex-shrink: 0;
+
+  display: grid;
+
+  place-items: center;
+
+  padding: 0;
+
+  border: 1px solid rgba(77, 49, 123, 0.12);
+
+  border-radius: 8px;
+
+  color: var(--muted);
+
+  background: #fff;
+
+  font-size: 1.35rem;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    color 0.18s ease,
+    background 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.product-modal-close:hover {
+  color: var(--violet-dark);
+
+  background: var(--pink-soft);
+
+  border-color:
+    rgba(110, 74, 160, 0.20);
+}
+
+
+/* =========================================================
+   FORMULARIO
+========================================================= */
+
+.product-form {
+  display: grid;
+
+  gap: 24px;
+}
+
+.product-form-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+
+/* =========================================================
+   CAMPOS
+========================================================= */
+
+.form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.product-form-full {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  color: var(--ink);
+
+  font-size: 0.72rem;
+
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 11px 13px;
+
+  border: 1px solid rgba(77, 49, 123, 0.14);
+
+  border-radius: 8px;
+
+  outline: none;
+
+  color: var(--ink);
+
+  background: #fff;
+
+  font-family:
+    "Montserrat",
+    Arial,
+    sans-serif;
+
+  font-size: 0.78rem;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-group input {
+  min-height: 43px;
+}
+
+.form-group textarea {
+  min-height: 105px;
+
+  resize: vertical;
+
+  line-height: 1.5;
+}
+
+.form-group select {
+  min-height: 43px;
+
+  cursor: pointer;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #a39cae;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: var(--violet);
+
+  box-shadow:
+    0 0 0 4px rgba(110, 74, 160, 0.09);
+}
+
+.form-group small {
+  color: var(--muted);
+
+  font-size: 0.64rem;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.product-form-error {
+  min-height: 18px;
+
+  margin: 0;
+
+  color: #a14e4e;
+
+  font-size: 0.72rem;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   BOTONES
+========================================================= */
+
+.product-form-actions {
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid var(--line);
+}
+
+.product-form-cancel {
+  min-height: 42px;
+
+  padding: 0 18px;
+
+  border: 1px solid rgba(77, 49, 123, 0.14);
+
+  border-radius: 8px;
+
+  color: var(--muted);
+
+  background: #fff;
+
+  font-family:
+    "Montserrat",
+    Arial,
+    sans-serif;
+
+  font-size: 0.76rem;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.18s ease,
+    border-color 0.18s ease,
+    color 0.18s ease;
+}
+
+.product-form-cancel:hover {
+  color: var(--violet-dark);
+
+  background: var(--pink-soft);
+
+  border-color:
+    rgba(110, 74, 160, 0.18);
+}
+
+.product-form-actions .admin-primary-button {
+  min-height: 42px;
+
+  padding: 0 20px;
+
+  border: none;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   VISTA DEL PRODUCTO
+========================================================= */
+
+.product-view-content {
+  padding: 0;
+}
+
+.product-view-content h3 {
+  margin: 0 0 16px;
+
+  color: var(--violet-dark);
+
+  font-family:
+    "Libre Baskerville",
+    Georgia,
+    serif;
+
+  font-size: 24px;
+}
+
+.product-view-content p {
+  margin: 0 0 18px;
+
+  color: var(--muted);
+
+  line-height: 1.7;
+}
+
+.product-view-content strong {
+  color: var(--ink);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .product-modal {
+    padding: 12px;
+  }
+
+  .product-modal-card {
+    width: 100%;
+
+    max-height: calc(100vh - 24px);
+
+    padding: 22px 18px;
+
+    border-radius: 12px;
+  }
+
+  .product-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-form-full {
+    grid-column: auto;
+  }
+
+  .product-form-actions {
+    flex-direction: column-reverse;
+
+    align-items: stretch;
+  }
+
+  .product-form-cancel,
+  .product-form-actions .admin-primary-button {
+    width: 100%;
+  }
+
+}
+/* =========================================================
+   SELECTOR DE IMAGEN
+========================================================= */
+
+.form-group input[type="file"] {
+  width: 100%;
+
+  min-height: 52px;
+
+  padding: 8px;
+
+  border: 1px dashed rgba(110, 74, 160, 0.28);
+
+  border-radius: 9px;
+
+  color: var(--muted);
+
+  background: #fff;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 0.75rem;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.form-group input[type="file"]:hover {
+  border-color: var(--violet);
+
+  background: #fffafd;
+}
+
+
+/* =========================================================
+   OPCIONES DEL PRODUCTO
+========================================================= */
+
+.product-options {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 10px;
+
+  width: 100%;
+
+  margin-top: 8px;
+}
+
+.product-option {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  min-height: 48px;
+
+  padding: 10px 12px;
+
+  border: 1px solid var(--line);
+
+  border-radius: 8px;
+
+  color: var(--muted);
+
+  background: var(--paper);
+
+  font-size: 0.72rem;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.product-option:hover {
+  border-color:
+    rgba(110, 74, 160, 0.22);
+
+  background: var(--pink-soft);
+
+  color: var(--violet-dark);
+}
+
+.product-option input {
+  width: 16px;
+  height: 16px;
+
+  margin: 0;
+
+  accent-color: var(--violet);
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 560px) {
+
+  .product-options {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/* =========================================================
+   PRECIO
+========================================================= */
+
+.price-input {
+  display: flex;
+
+  align-items: center;
+
+  min-height: 44px;
+
+  border: 1px solid rgba(77, 49, 123, 0.14);
+
+  border-radius: 8px;
+
+  background: #fff;
+
+  overflow: hidden;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.price-input:focus-within {
+  border-color: var(--violet);
+
+  box-shadow:
+    0 0 0 4px rgba(110, 74, 160, 0.10);
+}
+
+.price-symbol {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-width: 42px;
+
+  height: 44px;
+
+  color: var(--violet-dark);
+
+  background: var(--pink-soft);
+
+  font-size: 0.85rem;
+
+  font-weight: 800;
+}
+
+.price-input input {
+  width: 100%;
+
+  height: 44px;
+
+  padding: 0 13px;
+
+  border: none;
+
+  outline: none;
+
+  color: var(--ink);
+
+  background: transparent;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 0.82rem;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   AYUDA DEL FORMULARIO
+========================================================= */
+
+.form-help {
+  display: block;
+
+  margin-top: 6px;
+
+  color: var(--muted);
+
+  font-size: 0.66rem;
+
+  line-height: 1.4;
+}
+/* =========================================================
+   OPCIONES DEL PRODUCTO
+========================================================= */
+
+.product-options {
+  grid-column: 1 / -1;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 10px;
+
+  width: 100%;
+
+  margin-top: 2px;
+}
+
+
+.product-option {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  min-height: 48px;
+
+  padding: 10px 14px;
+
+  border: 1px solid var(--line);
+
+  border-radius: 8px;
+
+  color: var(--muted);
+
+  background: var(--paper);
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 0.72rem;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+
+.product-option:hover {
+  border-color:
+    rgba(110, 74, 160, 0.22);
+
+  color: var(--violet-dark);
+
+  background: var(--pink-soft);
+}
+
+
+.product-option input {
+  width: 16px;
+  height: 16px;
+
+  margin: 0;
+
+  accent-color: var(--violet);
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   CARGA DE IMAGEN
+========================================================= */
+
+.product-image-upload {
+  position: relative;
+}
+
+
+/* =========================================================
+   INPUT REAL
+========================================================= */
+
+.product-image-upload input[type="file"] {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+
+  opacity: 0;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   ZONA PARA SELECCIONAR
+========================================================= */
+
+.product-image-upload-label {
+  width: 100%;
+
+  min-height: 58px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 10px 14px;
+
+  border: 1px solid rgba(77, 49, 123, 0.13);
+
+  border-radius: 8px;
+
+  color: var(--violet-dark);
+
+  background: #fff;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.product-image-upload-label:hover {
+  border-color: rgba(110, 74, 160, 0.35);
+
+  background: #fffafd;
+
+  box-shadow:
+    0 4px 14px rgba(77, 49, 123, 0.06);
+}
+
+
+/* =========================================================
+   ICONO
+========================================================= */
+
+.product-image-upload-icon {
+  width: 36px;
+  height: 36px;
+
+  display: grid;
+
+  place-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 8px;
+
+  color: var(--violet-dark);
+
+  background: var(--pink-soft);
+
+  font-size: 1rem;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   TEXTO
+========================================================= */
+
+.product-image-upload-content {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+
+.product-image-upload-content strong {
+  color: var(--ink);
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 0.76rem;
+
+  font-weight: 700;
+}
+
+
+.product-image-upload-content small {
+  color: var(--muted);
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 0.64rem;
+}
+
+
+/* =========================================================
+   AYUDA
+========================================================= */
+
+.form-help {
+  display: block;
+
+  margin-top: 6px;
+
+  color: var(--muted);
+
+  font-size: 0.66rem;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .product-options {
+    grid-template-columns: 1fr;
+  }
+
+}
+/* =========================================================
+   VISTA PREVIA DE IMAGEN
+========================================================= */
+
+.product-image-preview {
+  width: 54px;
+  height: 54px;
+
+  flex-shrink: 0;
+
+  object-fit: cover;
+
+  border-radius: 7px;
+
+  border: 1px solid rgba(77, 49, 123, 0.12);
+
+  background: #fff;
+
+  box-shadow:
+    0 4px 12px rgba(77, 49, 123, 0.08);
+}
+
+
+.product-image-preview-content {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+
+.product-image-preview-content strong {
+  color: var(--violet-dark);
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 0.76rem;
+
+  font-weight: 800;
+}
+
+
+.product-image-preview-content small {
+  color: var(--muted);
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 0.64rem;
+}
+
+/* =========================================================
+   IMÁGENES ADICIONALES
+========================================================= */
+
+.product-additional-images {
+  display: grid;
+
+  gap: 12px;
+
+  width: 100%;
+}
+
+
+/* =========================================================
+   BLOQUE DE CADA IMAGEN
+========================================================= */
+
+.product-image-item {
+  width: 100%;
+}
+
+
+/* =========================================================
+   BOTÓN AGREGAR IMAGEN
+========================================================= */
+
+.product-add-image-button {
+  width: 100%;
+
+  min-height: 42px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-top: 12px;
+
+  padding: 0 16px;
+
+  border: 1px dashed rgba(110, 74, 160, 0.25);
+
+  border-radius: 8px;
+
+  color: var(--violet-dark);
+
+  background: rgba(247, 230, 238, 0.22);
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 0.74rem;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.product-add-image-button:hover {
+  border-color: var(--violet);
+
+  background: rgba(247, 230, 238, 0.45);
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   IMAGEN CON VISTA PREVIA
+========================================================= */
+
+.product-image-preview {
+  width: 54px;
+  height: 54px;
+
+  flex-shrink: 0;
+
+  object-fit: cover;
+
+  border-radius: 7px;
+
+  border: 1px solid rgba(77, 49, 123, 0.12);
+
+  background: #fff;
+
+  box-shadow:
+    0 4px 12px rgba(77, 49, 123, 0.08);
+}
+
+
+/* =========================================================
+   TEXTO DE LA VISTA PREVIA
+========================================================= */
+
+.product-image-preview-content {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+
+.product-image-preview-content strong {
+  color: var(--violet-dark);
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 0.76rem;
+
+  font-weight: 800;
+}
+
+
+.product-image-preview-content small {
+  color: var(--muted);
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 0.64rem;
+}
+
+/* =========================================================
+   VISTA DEL PRODUCTO
+========================================================= */
+
+.product-view-product {
+  display: grid;
+
+  gap: 24px;
+}
+
+
+/* =========================================================
+   IMAGEN
+========================================================= */
+
+.product-view-image {
+  width: 100%;
+
+  height: 280px;
+
+  overflow: hidden;
+
+  border-radius: 12px;
+
+  border: 1px solid var(--line);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--pink-soft),
+      var(--blue)
+    );
+}
+
+.product-view-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   INFORMACIÓN
+========================================================= */
+
+.product-view-info {
+  display: grid;
+
+  gap: 18px;
+}
+
+
+.product-view-category {
+  display: inline-flex;
+
+  width: fit-content;
+
+  padding: 5px 9px;
+
+  border-radius: 5px;
+
+  color: var(--violet-dark);
+
+  background: var(--pink-soft);
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 0.64rem;
+
+  font-weight: 700;
+}
+
+
+.product-view-name {
+  margin: 0;
+
+  color: var(--violet-dark);
+
+  font-family:
+    "Libre Baskerville",
+    Georgia,
+    serif;
+
+  font-size: 1.5rem;
+
+  line-height: 1.3;
+}
+
+
+.product-view-price {
+  color: var(--violet-dark);
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 1.25rem;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   ESTADOS
+========================================================= */
+
+.product-view-badges {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+
+.product-view-badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  min-height: 28px;
+
+  padding: 5px 10px;
+
+  border-radius: 20px;
+
+  color: var(--violet-dark);
+
+  background: var(--pink-soft);
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 0.65rem;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   DESCRIPCIÓN
+========================================================= */
+
+.product-view-description {
+  padding-top: 18px;
+
+  border-top: 1px solid var(--line);
+}
+
+
+.product-view-description strong {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--violet-dark);
+
+  font-size: 0.72rem;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.05em;
+}
+
+
+.product-view-description p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 0.82rem;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   ACCIONES
+========================================================= */
+
+.product-view-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid var(--line);
+}
+
+
+.product-view-edit {
+  min-height: 42px;
+
+  padding: 0 18px;
+
+  border: 1px solid var(--violet);
+
+  border-radius: 8px;
+
+  color: #fff;
+
+  background: var(--violet);
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 0.74rem;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.product-view-edit:hover {
+  background: var(--violet-dark);
+
+  transform: translateY(-1px);
+}
+
+
+@media (max-width: 600px) {
+
+  .product-view-image {
+    height: 220px;
+  }
+
+  .product-view-actions {
+    flex-direction: column;
+  }
+
+  .product-view-edit {
+    width: 100%;
+  }
+
+}
+
+/* =========================================================
+   ELIMINAR IMAGEN
+========================================================= */
+
+.product-image-delete {
+  position: absolute;
+
+  top: 10px;
+  right: 10px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+
+  padding: 0;
+
+  border: 1px solid rgba(163, 79, 79, 0.16);
+
+  border-radius: 7px;
+
+  color: #a35b5b;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.08);
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  transition:
+    color 0.18s ease,
+    background 0.18s ease,
+    border-color 0.18s ease,
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+
+.product-image-delete:hover {
+  color: #963f3f;
+
+  background: #fff;
+
+  border-color:
+    rgba(150, 63, 63, 0.25);
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 6px 16px rgba(0, 0, 0, 0.11);
+}
+
+
+.product-image-delete:active {
+  transform: translateY(0);
+}
+
+
+.product-image-delete:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+
+  transform: none;
+}

@@ -8,9 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+  href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+  rel="stylesheet"
+/>
 
     <link rel="stylesheet" href="../styles.css?v=20260718-2" />
     <link rel="icon" type="image/png" href="../assets/Fondo-EP.png" />
@@ -37,6 +37,7 @@
           <a href="../index.html">Inicio</a>
           <a href="catalogo.html">Catálogo</a>
           <a href="trabajos-personalizados.html">Personalizados</a>
+          <a href="insumos.html">Insumos</a>
           <a href="promociones.html">Promociones</a>
           <a href="nosotros.html">Nosotros</a>
           <a href="contacto.html">Contacto</a>
@@ -69,169 +70,10 @@
           <button class="filter-btn" data-filter="novedades">Novedades</button>
         </div>
 
-        <div class="product-grid catalog-grid">
+        <div class="product-grid catalog-grid" id="catalogo-productos">
+</div>
 
-<article class="product-card" data-category="infantiles novedades" tabindex="0">
-  
-
-  <div class="product-content">
-
-     <div class="carousel">
-    <img src="../assets/libretas.png" class="slide" alt="Libreta">
-    <img src="../assets/libretas2.jpeg" class="slide" alt="Libreta 2">
-    <img src="../assets/libretas3.jpeg" class="slide" alt="Libreta 3">
-  </div>
-    <span class="tag">Infantiles</span>
-    <h3>Libreta decorada, tapa flexible de 40 hojas.</h3>
-    <p>Tamaño 15 cm x 10 cm. Interior liso/rayas/punteado.</p>
-    <strong>$4.499</strong>
-
-    <!-- CONTADOR -->
-    <div class="cantidad">
-      <button class="btn-cantidad" onclick="restar(this)">-</button>
-      <span class="contador">1</span>
-      <button class="btn-cantidad" onclick="sumar(this)">+</button>
-    </div>
-
-    <button
-      class="btn btn-primary agregar-carrito"
-      data-producto="Libreta decorada"
-      data-precio="4499">
-      
-      Agregar al carrito
-    </button>
-
-  </div>
-</article>
-
-<article class="product-card" data-category="adultos" tabindex="0">
-  
-  <div class="product-content">
-      <div class="carousel">
-    <img src="../assets/lapiceras.jpeg" class="slide" alt="Lapiceras decoradas">
-    <img src="../assets/lapiceras1.jpeg" class="slide" alt="Lapiceras 1">
-    <img src="../assets/lapiceras2.jpeg" class="slide" alt="Lapiceras 2">
-  </div>
-    <span class="tag">Papelería</span>
-    <h3>Lapiceras decoradas</h3>
-    <p>Tinta azul, negra, roja, y demás.</p>
-    <strong>$1790 c/u</strong>
-
-    <div class="cantidad">
-      <button class="btn-cantidad" onclick="restar(this)">-</button>
-      <span class="contador">1</span>
-      <button class="btn-cantidad" onclick="sumar(this)">+</button>
-    </div>
-
-    <button
-      class="btn btn-primary agregar-carrito"
-      data-producto="Lapiceras decoradas"
-      data-precio="1790">
-      
-      Agregar al carrito
-    </button>
-  </div>
-</article>
-
-<article class="product-card" data-category="papeleria" tabindex="0">
- 
- <div class="product-content">
-
-     <div class="carousel">
-    <img src="../assets/lapices.jpeg" class="slide" alt="Lapiceras decoradas">
-    <img src="../assets/lapices1.jpeg" class="slide" alt="Lapices 1">
-    <img src="../assets/lapices2.jpeg" class="slide" alt="Lapices 2">
-  </div>
-    <span class="tag">Papelería</span>
-    <h3>Lapices decorados</h3>
-    <p>Lapices de grafito para escribir y dibujar.</p>
-    <strong>$799 c/u</strong>
-    <div class="cantidad">
-      <button class="btn-cantidad" onclick="restar(this)">-</button>
-      <span class="contador">1</span>
-      <button class="btn-cantidad" onclick="sumar(this)">+</button>
-    </div>
-
-    <button
-      class="btn btn-primary agregar-carrito"
-      data-producto="Lapices decorados"
-      data-precio="799">
-      
-      Agregar al carrito
-    </button>
-  </div>
-</article>
-
-<article class="product-card" data-category="agendas" tabindex="0">
-  <div class="product-image product-agenda"></div>
-  <div class="product-content">
-    <span class="tag">Agendas</span>
-    <h3>Agenda personalizada</h3>
-    <p>Diseño a medida con tu nombre.</p>
-    <strong>$15.000</strong>
-
-    <div class="cantidad">
-      <button class="btn-cantidad" onclick="restar(this)">-</button>
-      <span class="contador">1</span>
-      <button class="btn-cantidad" onclick="sumar(this)">+</button>
-    </div>
-
-    <button
-      class="btn btn-primary agregar-carrito"
-      data-producto="Agenda personalizada"
-      data-precio="15000">
-      Agregar al carrito
-    </button>
-  </div>
-</article>
-
-<article class="product-card" data-category="combos promociones" tabindex="0">
-  <div class="product-image product-combo"></div>
-  <div class="product-content">
-    <span class="tag">Combos</span>
-    <h3>Combo especial regalo</h3>
-    <p>Libro + papelería + sorpresa.</p>
-    <strong>$20.000</strong>
-
-    <div class="cantidad">
-      <button class="btn-cantidad" onclick="restar(this)">-</button>
-      <span class="contador">1</span>
-      <button class="btn-cantidad" onclick="sumar(this)">+</button>
-    </div>
-
-    <button
-      class="btn btn-primary agregar-carrito"
-      data-producto="Combo especial regalo"
-      data-precio="20000">
-      Agregar al carrito
-    </button>
-  </div>
-</article>
-
-<article class="product-card" data-category="novedades" tabindex="0">
-  <div class="product-image product-new"></div>
-  <div class="product-content">
-    <span class="tag">Novedades</span>
-    <h3>Novedad del mes</h3>
-    <p>Lanzamiento especial disponible.</p>
-    <strong>$11.000</strong>
-
-    <div class="cantidad">
-      <button class="btn-cantidad" onclick="restar(this)">-</button>
-      <span class="contador">1</span>
-      <button class="btn-cantidad" onclick="sumar(this)">+</button>
-    </div>
-
-    <button
-      class="btn btn-primary agregar-carrito"
-      data-producto="Novedad del mes"
-      data-precio="11000">
-      Agregar al carrito
-    </button>
-  </div>
-</article>
-
-        </div>
+       
       </section>
 
       <div class="product-modal" id="product-modal" aria-hidden="true">

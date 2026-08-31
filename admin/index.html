@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Administración | Editorial Peregrinar</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="admin.css" />
+</head>
+
+<body>
+
+  <!-- =====================================================
+       SIDEBAR
+  ====================================================== -->
+
+  <aside class="admin-sidebar">
+
+    <div class="admin-brand">
+
+      <img
+        src="../assets/FondoEditorial.png"
+        alt="Editorial Peregrinar"
+      />
+
+      <div>
+        <strong>Editorial</strong>
+        <span>Peregrinar</span>
+      </div>
+
+    </div>
+
+
+    <nav class="admin-nav">
+
+      <p class="admin-nav-title">
+        PRINCIPAL
+      </p>
+
+      <a
+        href="index.html"
+        class="admin-nav-link active"
+      >
+        <span>⌂</span>
+        Dashboard
+      </a>
+
+      <a
+        href="productos.html"
+        class="admin-nav-link"
+      >
+        <span>▣</span>
+        Productos
+      </a>
+
+      <a
+        href="#"
+        class="admin-nav-link"
+      >
+        <span>◫</span>
+        Categorías
+      </a>
+
+      <a
+        href="#"
+        class="admin-nav-link"
+      >
+        <span>□</span>
+        Pedidos
+      </a>
+
+
+      <p class="admin-nav-title">
+        TIENDA
+      </p>
+
+      <a
+        href="#"
+        class="admin-nav-link"
+      >
+        <span>✦</span>
+        Apariencia
+      </a>
+
+      <a
+        href="#"
+        class="admin-nav-link"
+      >
+        <span>⚙</span>
+        Configuración
+      </a>
+
+    </nav>
+
+
+    <div class="admin-sidebar-footer">
+
+      <a
+        href="../index.html"
+        class="view-store"
+      >
+        ← Ver tienda
+      </a>
+
+      <button
+        type="button"
+        class="logout-button"
+      >
+        Cerrar sesión
+      </button>
+
+    </div>
+
+  </aside>
+
+
+  <!-- =====================================================
+       CONTENIDO PRINCIPAL
+  ====================================================== -->
+
+  <main class="admin-main">
+
+    <header class="admin-topbar">
+
+      <div>
+
+        <p class="admin-eyebrow">
+          Administración
+        </p>
+
+        <h1>
+          ¡Hola! 👋
+        </h1>
+
+        <p class="admin-subtitle">
+          Aquí podés gestionar tu tienda.
+        </p>
+
+      </div>
+
+
+      <div class="admin-user">
+
+  <div class="admin-avatar">
+    A
+  </div>
+
+  <div>
+
+    <strong>
+      Administrador
+    </strong>
+
+    <span>
+      Tienda
+    </span>
+
+  </div>
+
+</div>
+
+    </header>
+
+
+    <!-- =================================================
+         RESUMEN
+    ================================================== -->
+
+    <section class="dashboard-section">
+
+      <div class="section-title">
+
+        <div>
+
+          <p class="admin-eyebrow">
+            Resumen
+          </p>
+
+          <h2>
+            Tu tienda
+          </h2>
+
+        </div>
+
+      </div>
+
+
+      <div class="stats-grid">
+
+        <article class="stat-card">
+
+          <span class="stat-label">
+            Productos
+          </span>
+
+          <strong class="stat-number">
+            0
+          </strong>
+
+          <span class="stat-description">
+            Productos publicados
+          </span>
+
+        </article>
+
+
+        <article class="stat-card">
+
+          <span class="stat-label">
+            Pedidos
+          </span>
+
+          <strong class="stat-number">
+            0
+          </strong>
+
+          <span class="stat-description">
+            Pedidos recibidos
+          </span>
+
+        </article>
+
+
+        <article class="stat-card">
+
+          <span class="stat-label">
+            Categorías
+          </span>
+
+          <strong class="stat-number">
+            0
+          </strong>
+
+          <span class="stat-description">
+            Categorías creadas
+          </span>
+
+        </article>
+
+
+        <article class="stat-card">
+
+          <span class="stat-label">
+            Estado
+          </span>
+
+          <strong class="stat-status">
+            Activa
+          </strong>
+
+          <span class="stat-description">
+            Tienda publicada
+          </span>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+         ACCIONES RÁPIDAS
+    ================================================== -->
+
+    <section class="dashboard-section">
+
+      <div class="section-title">
+
+        <div>
+
+          <p class="admin-eyebrow">
+            Acciones rápidas
+          </p>
+
+          <h2>
+            ¿Qué querés hacer?
+          </h2>
+
+        </div>
+
+      </div>
+
+
+      <div class="quick-actions">
+
+        <a
+          href="#"
+          class="quick-action"
+        >
+
+          <span class="quick-icon">
+            +
+          </span>
+
+          <div>
+
+            <strong>
+              Agregar producto
+            </strong>
+
+            <span>
+              Publicá un nuevo producto
+            </span>
+
+          </div>
+
+        </a>
+
+
+        <a
+          href="#"
+          class="quick-action"
+        >
+
+          <span class="quick-icon">
+            ◫
+          </span>
+
+          <div>
+
+            <strong>
+              Ver pedidos
+            </strong>
+
+            <span>
+              Revisá los pedidos de tu tienda
+            </span>
+
+          </div>
+
+        </a>
+
+
+        <a
+          href="#"
+          class="quick-action"
+        >
+
+          <span class="quick-icon">
+            ✦
+          </span>
+
+          <div>
+
+            <strong>
+              Personalizar tienda
+            </strong>
+
+            <span>
+              Modificá la apariencia
+            </span>
+
+          </div>
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+         ESTADO DE LA TIENDA
+    ================================================== -->
+
+    <section class="dashboard-section">
+
+      <div class="store-status">
+
+        <div>
+
+          <p class="admin-eyebrow">
+            Estado de la tienda
+          </p>
+
+          <h2>
+            Tu tienda está activa
+          </h2>
+
+          <p>
+            Los clientes pueden visitar tu catálogo
+            y consultar tus productos.
+          </p>
+
+        </div>
+
+
+        <a
+          href="../index.html"
+          class="admin-primary-button"
+        >
+          Ver tienda
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+<script src="admin.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1009 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Apariencia</title>
+
+    <link
+        rel="stylesheet"
+        href="../styles.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../apariencia.css"
+    >
+
+</head>
+
+<body>
+
+    <main class="appearance-page">
+
+
+        <!-- =================================================
+             ENCABEZADO
+        ================================================== -->
+
+        <header class="appearance-header">
+
+            <div>
+
+                <span class="appearance-eyebrow">
+                    PERSONALIZACIÓN
+                </span>
+
+                <h1>
+                    Apariencia
+                </h1>
+
+                <p>
+                    Personalizá la apariencia de tu tienda
+                    y mirá los cambios en tiempo real.
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             CONTENIDO PRINCIPAL
+        ================================================== -->
+
+        <section class="appearance-layout">
+
+
+            <!-- =================================================
+                 PANEL DE CONFIGURACIÓN
+            ================================================== -->
+
+            <div class="appearance-settings">
+
+
+                <!-- =================================================
+                     IDENTIDAD
+                ================================================== -->
+
+                <section class="appearance-section">
+
+                    <div class="appearance-section-header">
+
+                        <div>
+
+                            <h2>
+                                Identidad de la tienda
+                            </h2>
+
+                            <p>
+                                Definí cómo se presenta tu tienda.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="appearance-fields">
+
+
+                        <!-- NOMBRE -->
+
+                        <div class="appearance-field">
+
+                            <label for="aparienciaNombre">
+                                Nombre de la tienda
+                            </label>
+
+                            <div class="appearance-input-row">
+
+                                <input
+                                    type="text"
+                                    id="aparienciaNombre"
+                                    placeholder="Mi tienda"
+                                >
+
+                                <button
+                                    type="button"
+                                    class="appearance-reset"
+                                    data-reset="aparienciaNombre"
+                                    hidden
+                                >
+                                    ↶ Restaurar
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- DESCRIPCIÓN -->
+
+                        <div class="appearance-field">
+
+                            <label for="aparienciaDescripcion">
+                                Descripción
+                            </label>
+
+                            <div class="appearance-input-row">
+
+                                <textarea
+                                    id="aparienciaDescripcion"
+                                    rows="3"
+                                    placeholder="Una breve descripción de tu tienda..."
+                                ></textarea>
+
+                                <button
+                                    type="button"
+                                    class="appearance-reset"
+                                    data-reset="aparienciaDescripcion"
+                                    hidden
+                                >
+                                    ↶ Restaurar
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- LOGO -->
+
+                        <div class="appearance-field">
+
+                            <label>
+                                Logo
+                            </label>
+
+                            <div class="appearance-logo-upload">
+
+                                <div
+                                    class="appearance-logo-preview"
+                                    id="aparienciaLogoPreview"
+                                >
+
+                                    <span>
+                                        +
+                                    </span>
+
+                                </div>
+
+
+                                <div>
+
+                                    <strong>
+                                        Agregar logo
+                                    </strong>
+
+                                    <small>
+                                        PNG, JPG o WEBP
+                                    </small>
+
+                                    <input
+                                        type="file"
+                                        id="aparienciaLogo"
+                                        accept="image/*"
+                                    >
+
+                                </div>
+
+
+                                <button
+                                    type="button"
+                                    class="appearance-reset"
+                                    data-reset="aparienciaLogo"
+                                    hidden
+                                >
+                                    ↶
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     COLORES
+                ================================================== -->
+
+                <section class="appearance-section">
+
+                    <div class="appearance-section-header">
+
+                        <div>
+
+                            <h2>
+                                Colores
+                            </h2>
+
+                            <p>
+                                Elegí los colores principales de tu tienda.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="appearance-color-grid">
+
+
+                        <!-- COLOR PRINCIPAL -->
+
+                        <div class="appearance-color-field">
+
+                            <label for="colorPrincipal">
+                                Color principal
+                            </label>
+
+                            <div class="appearance-color-control">
+
+                                <input
+                                    type="color"
+                                    id="colorPrincipal"
+                                    value="#7C3AED"
+                                >
+
+                                <span id="colorPrincipalValor">
+                                    #7C3AED
+                                </span>
+
+                                <button
+                                    type="button"
+                                    class="appearance-reset"
+                                    data-reset="colorPrincipal"
+                                    hidden
+                                    aria-label="Restaurar color principal"
+                                >
+                                    ↶
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- COLOR SECUNDARIO -->
+
+                        <div class="appearance-color-field">
+
+                            <label for="colorSecundario">
+                                Color secundario
+                            </label>
+
+                            <div class="appearance-color-control">
+
+                                <input
+                                    type="color"
+                                    id="colorSecundario"
+                                    value="#F3F4F6"
+                                >
+
+                                <span id="colorSecundarioValor">
+                                    #F3F4F6
+                                </span>
+
+                                <button
+                                    type="button"
+                                    class="appearance-reset"
+                                    data-reset="colorSecundario"
+                                    hidden
+                                    aria-label="Restaurar color secundario"
+                                >
+                                    ↶
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- FONDO -->
+
+                        <div class="appearance-color-field">
+
+                            <label for="colorFondo">
+                                Fondo
+                            </label>
+
+                            <div class="appearance-color-control">
+
+                                <input
+                                    type="color"
+                                    id="colorFondo"
+                                    value="#FFFFFF"
+                                >
+
+                                <span id="colorFondoValor">
+                                    #FFFFFF
+                                </span>
+
+                                <button
+                                    type="button"
+                                    class="appearance-reset"
+                                    data-reset="colorFondo"
+                                    hidden
+                                    aria-label="Restaurar color de fondo"
+                                >
+                                    ↶
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- TEXTO -->
+
+                        <div class="appearance-color-field">
+
+                            <label for="colorTexto">
+                                Texto
+                            </label>
+
+                            <div class="appearance-color-control">
+
+                                <input
+                                    type="color"
+                                    id="colorTexto"
+                                    value="#111827"
+                                >
+
+                                <span id="colorTextoValor">
+                                    #111827
+                                </span>
+
+                                <button
+                                    type="button"
+                                    class="appearance-reset"
+                                    data-reset="colorTexto"
+                                    hidden
+                                    aria-label="Restaurar color de texto"
+                                >
+                                    ↶
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+<!-- =================================================
+     TIPOGRAFÍA
+================================================== -->
+
+<section class="appearance-section">
+
+    <div class="appearance-section-header">
+
+        <div>
+
+            <span class="appearance-section-kicker">
+                TIPOGRAFÍA
+            </span>
+
+            <h2>
+                Tipografía
+            </h2>
+
+            <p>
+                Elegí cómo se verán los textos de tu tienda.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="appearance-fields">
+
+
+        <!-- =============================================
+             FUENTE PRINCIPAL
+        ============================================== -->
+
+        <div class="appearance-field">
+
+            <label for="fuentePrincipal">
+                Fuente principal
+            </label>
+
+            <div class="appearance-input-row">
+
+                <select id="fuentePrincipal">
+
+                    <option value="Inter">
+                        Inter
+                    </option>
+
+                    <option value="Poppins">
+                        Poppins
+                    </option>
+
+                    <option value="Montserrat">
+                        Montserrat
+                    </option>
+
+                    <option value="Roboto">
+                        Roboto
+                    </option>
+
+                    <option value="Lato">
+                        Lato
+                    </option>
+
+                </select>
+
+
+                <button
+                    type="button"
+                    class="appearance-reset"
+                    data-reset="fuentePrincipal"
+                    hidden
+                >
+                    ↶ Restaurar
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =============================================
+             FUENTE DE TÍTULOS
+        ============================================== -->
+
+        <div class="appearance-field">
+
+            <label for="fuenteTitulos">
+                Fuente de títulos
+            </label>
+
+            <div class="appearance-input-row">
+
+                <select id="fuenteTitulos">
+
+                    <option value="Inter">
+                        Igual a la principal
+                    </option>
+
+                    <option value="Poppins">
+                        Poppins
+                    </option>
+
+                    <option value="Montserrat">
+                        Montserrat
+                    </option>
+
+                    <option value="Roboto">
+                        Roboto
+                    </option>
+
+                    <option value="Lato">
+                        Lato
+                    </option>
+
+                </select>
+
+
+                <button
+                    type="button"
+                    class="appearance-reset"
+                    data-reset="fuenteTitulos"
+                    hidden
+                >
+                    ↶ Restaurar
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =============================================
+             TAMAÑO DE TÍTULOS
+        ============================================== -->
+
+        <div class="appearance-field">
+
+            <label for="tamanoTitulos">
+                Tamaño de títulos
+            </label>
+
+            <div class="appearance-input-row">
+
+                <select id="tamanoTitulos">
+
+                    <option value="small">
+                        Pequeño
+                    </option>
+
+                    <option value="medium">
+                        Mediano
+                    </option>
+
+                    <option value="large">
+                        Grande
+                    </option>
+
+                </select>
+
+
+                <button
+                    type="button"
+                    class="appearance-reset"
+                    data-reset="tamanoTitulos"
+                    hidden
+                >
+                    ↶ Restaurar
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =============================================
+             GROSOR DE TÍTULOS
+        ============================================== -->
+
+        <div class="appearance-field">
+
+            <label for="pesoTitulos">
+                Grosor de títulos
+            </label>
+
+            <div class="appearance-input-row">
+
+                <select id="pesoTitulos">
+
+                    <option value="400">
+                        Normal
+                    </option>
+
+                    <option value="500">
+                        Medio
+                    </option>
+
+                    <option value="600">
+                        Seminegrita
+                    </option>
+
+                    <option value="700">
+                        Negrita
+                    </option>
+
+                </select>
+
+
+                <button
+                    type="button"
+                    class="appearance-reset"
+                    data-reset="pesoTitulos"
+                    hidden
+                >
+                    ↶ Restaurar
+                </button>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+                <!-- =================================================
+                     ESTILO
+                ================================================== -->
+
+                <section class="appearance-section">
+
+                    <div class="appearance-section-header">
+
+                        <div>
+
+                            <h2>
+                                Estilo
+                            </h2>
+
+                            <p>
+                                Personalizá algunos detalles visuales.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="appearance-fields">
+
+
+                        <!-- BOTONES -->
+
+                        <div class="appearance-field">
+
+                            <label for="estiloBotones">
+                                Botones
+                            </label>
+
+                            <div class="appearance-input-row">
+
+                                <select id="estiloBotones">
+
+                                    <option value="rounded">
+                                        Redondeados
+                                    </option>
+
+                                    <option value="soft">
+                                        Suaves
+                                    </option>
+
+                                    <option value="square">
+                                        Rectos
+                                    </option>
+
+                                </select>
+
+                                <button
+                                    type="button"
+                                    class="appearance-reset"
+                                    data-reset="estiloBotones"
+                                    hidden
+                                >
+                                    ↶ Restaurar
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- TARJETAS -->
+
+                        <div class="appearance-field">
+
+                            <label for="estiloTarjetas">
+                                Tarjetas de productos
+                            </label>
+
+                            <div class="appearance-input-row">
+
+                                <select id="estiloTarjetas">
+
+                                    <option value="soft">
+                                        Suaves
+                                    </option>
+
+                                    <option value="border">
+                                        Con borde
+                                    </option>
+
+                                    <option value="shadow">
+                                        Con sombra
+                                    </option>
+
+                                </select>
+
+                                <button
+                                    type="button"
+                                    class="appearance-reset"
+                                    data-reset="estiloTarjetas"
+                                    hidden
+                                >
+                                    ↶ Restaurar
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     TEXTOS
+                ================================================== -->
+
+                <section class="appearance-section">
+
+                    <div class="appearance-section-header">
+
+                        <div>
+
+                            <h2>
+                                Textos
+                            </h2>
+
+                            <p>
+                                Personalizá los textos principales de tu tienda.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="appearance-fields">
+
+
+                        <!-- TÍTULO -->
+
+                        <div class="appearance-field">
+
+                            <label for="textoBienvenida">
+                                Título principal
+                            </label>
+
+                            <div class="appearance-input-row">
+
+                                <input
+                                    type="text"
+                                    id="textoBienvenida"
+                                    placeholder="Bienvenido a nuestra tienda"
+                                >
+
+                                <button
+                                    type="button"
+                                    class="appearance-reset"
+                                    data-reset="textoBienvenida"
+                                    hidden
+                                >
+                                    ↶ Restaurar
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- SUBTÍTULO -->
+
+                        <div class="appearance-field">
+
+                            <label for="textoSubtitulo">
+                                Subtítulo
+                            </label>
+
+                            <div class="appearance-input-row">
+
+                                <textarea
+                                    id="textoSubtitulo"
+                                    rows="3"
+                                    placeholder="Descubrí nuestros productos..."
+                                ></textarea>
+
+                                <button
+                                    type="button"
+                                    class="appearance-reset"
+                                    data-reset="textoSubtitulo"
+                                    hidden
+                                >
+                                    ↶ Restaurar
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     ACCIONES
+                ================================================== -->
+
+                <div class="appearance-actions">
+
+
+                    <button
+                        type="button"
+                        id="btnRestablecerApariencia"
+                        class="appearance-reset-all"
+                    >
+                        ↶ Restablecer apariencia
+                    </button>
+
+
+                   <button
+    type="button"
+    id="btnGuardarApariencia"
+    class="appearance-save"
+>
+    Guardar cambios
+</button>
+
+
+                </div>
+
+
+            </div>
+
+
+            <!-- =================================================
+                 VISTA PREVIA
+            ================================================== -->
+
+            <aside class="appearance-preview">
+
+
+                <!-- HEADER -->
+
+                <div class="appearance-preview-header">
+
+                    <div>
+
+                        <span>
+                            VISTA PREVIA
+                        </span>
+
+                        <h2>
+                            Tu tienda
+                        </h2>
+
+                    </div>
+
+
+                    <span class="appearance-preview-live">
+                        ● En vivo
+                    </span>
+
+                </div>
+
+
+                <!-- =================================================
+                     TELÉFONO
+                ================================================== -->
+
+                <div class="phone-preview">
+
+                    <div class="phone-frame">
+
+                        <div class="phone-screen">
+
+
+                            <!-- BARRA DEL TELÉFONO -->
+
+                            <div class="phone-status-bar">
+
+                                <span>
+                                    9:41
+                                </span>
+
+                                <span>
+                                    ● ● ●
+                                </span>
+
+                            </div>
+
+
+                            <!-- HEADER DE TIENDA -->
+
+                            <div class="phone-store-header">
+
+                                <div
+                                    class="phone-logo"
+                                    id="previewLogo"
+                                >
+                                    M
+                                </div>
+
+                                <strong
+                                    id="previewNombre"
+                                >
+                                    Mi tienda
+                                </strong>
+
+                            </div>
+
+
+                            <!-- HERO -->
+
+                            <div class="phone-hero">
+
+                                <span>
+                                    TU TIENDA
+                                </span>
+
+                                <h3 id="previewBienvenida">
+                                    Bienvenido a nuestra tienda
+                                </h3>
+
+                                <p id="previewSubtitulo">
+                                    Descubrí nuestros productos...
+                                </p>
+
+                                <button
+                                    type="button"
+                                    id="previewBoton"
+                                >
+                                    Ver productos
+                                </button>
+
+                            </div>
+
+
+                            <!-- PRODUCTOS -->
+
+                            <div class="phone-products">
+
+
+                                <div class="phone-product-card">
+
+                                    <div class="phone-product-image">
+                                        Producto
+                                    </div>
+
+                                    <strong>
+                                        Producto ejemplo
+                                    </strong>
+
+                                    <span>
+                                        $25.000
+                                    </span>
+
+                                </div>
+
+
+                                <div class="phone-product-card">
+
+                                    <div class="phone-product-image">
+                                        Producto
+                                    </div>
+
+                                    <strong>
+                                        Producto ejemplo
+                                    </strong>
+
+                                    <span>
+                                        $32.000
+                                    </span>
+
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </aside>
+
+
+        </section>
+
+
+    </main>
+
+
+    <script src="../apariencia.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+node_modules/
+.env
+
+backend/crearUsuario.js
+backend/test-db.js
+
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+graphify-out/
