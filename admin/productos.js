@@ -1883,6 +1883,117 @@ productosTabla.addEventListener(
 );
 
 // =========================================================
+// BOTÓN ELIMINAR PRODUCTO
+// =========================================================
+
+productosTabla.addEventListener(
+  "click",
+  async (event) => {
+
+    const boton =
+      event.target.closest(
+        ".btn-eliminar-producto"
+      );
+
+    if (!boton) {
+
+      return;
+
+    }
+
+    const productoId =
+      boton.dataset.productoId;
+
+    const confirmar =
+      confirm(
+        "¿Querés eliminar este producto? Esta acción no se puede deshacer."
+      );
+
+    if (!confirmar) {
+
+      return;
+
+    }
+
+    const token =
+      localStorage.getItem(
+        "token"
+      );
+
+    if (!token) {
+
+      alert(
+        "No hay sesión iniciada."
+      );
+
+      return;
+
+    }
+
+    try {
+
+      boton.disabled = true;
+
+      const respuesta =
+        await fetch(
+          `${API_BASE_URL}/api/productos/${productoId}`,
+          {
+
+            method: "DELETE",
+
+            headers: {
+
+              Authorization:
+                `Bearer ${token}`
+
+            }
+
+          }
+        );
+
+      const datos =
+        await respuesta.json();
+
+      if (!respuesta.ok) {
+
+        throw new Error(
+          datos.error ||
+          "No se pudo eliminar el producto."
+        );
+
+      }
+
+      console.log(
+        "Producto eliminado:",
+        datos
+      );
+
+      await cargarProductos();
+
+      alert(
+        "Producto eliminado correctamente."
+      );
+
+    } catch (error) {
+
+      console.error(
+        "Error eliminando producto:",
+        error
+      );
+
+      alert(
+        error.message ||
+        "No se pudo eliminar el producto."
+      );
+
+      boton.disabled = false;
+
+    }
+
+  }
+);
+
+// =========================================================
 // BOTÓN EDITAR PRODUCTO
 // =========================================================
 
