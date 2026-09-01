@@ -862,7 +862,51 @@ function cargarFuenteGoogle(
 
                         }
                     );
+                if (
+                    aparienciaGuardada.logoUrl
+                ) {
 
+                    const logoPreview =
+                        document.getElementById(
+                            "aparienciaLogoPreview"
+                        );
+
+                    const urlCompleta =
+                        `${API_BASE_URL}${aparienciaGuardada.logoUrl}`;
+
+
+                    if (logoPreview) {
+
+                        logoPreview.innerHTML = `
+
+                            <img
+                                src="${urlCompleta}"
+                                alt="Logo de la tienda"
+                            >
+
+                        `;
+
+                    }
+
+
+                    if (previewLogo) {
+
+                        previewLogo.innerHTML = `
+
+                            <img
+                                src="${urlCompleta}"
+                                alt="Logo"
+                            >
+
+                        `;
+
+
+                        previewLogo.style.background =
+                            "transparent";
+
+                    }
+
+                }
 
                     actualizarVistaPrevia();
 
@@ -1060,7 +1104,6 @@ function cargarFuenteGoogle(
 
                 }
 
-
                 // -----------------------------------------
                 // CONFIGURACIÓN
                 // -----------------------------------------
@@ -1073,8 +1116,9 @@ function cargarFuenteGoogle(
                     descripcion_tienda:
                         aparienciaDescripcion?.value || "",
 
-                    logo_url:
-                        null,
+                    logo_url_actual:
+                        aparienciaGuardada?.logoUrl ||
+                        "",
 
                     color_principal:
                         colorPrincipal?.value ||
@@ -1135,6 +1179,34 @@ function cargarFuenteGoogle(
                 // REQUEST
                 // -----------------------------------------
 
+                                const formData =
+                    new FormData();
+
+
+                Object.keys(configuracion).forEach(
+                    campo => {
+
+                        formData.append(
+                            campo,
+                            configuracion[campo]
+                        );
+
+                    }
+                );
+
+
+                if (
+                    aparienciaLogo?.files?.[0]
+                ) {
+
+                    formData.append(
+                        "logo",
+                        aparienciaLogo.files[0]
+                    );
+
+                }
+
+
                 const respuesta =
                     await fetch(
                         `${API_BASE_URL}/api/apariencia`,
@@ -1144,18 +1216,13 @@ function cargarFuenteGoogle(
 
                             headers: {
 
-                                "Content-Type":
-                                    "application/json",
-
                                 Authorization:
                                     `Bearer ${token}`
 
                             },
 
                             body:
-                                JSON.stringify(
-                                    configuracion
-                                )
+                                formData
 
                         }
                     );
@@ -1182,10 +1249,16 @@ function cargarFuenteGoogle(
                 aparienciaGuardada = {
 
                     aparienciaNombre:
-                        aparienciaNombre?.value || "",
+                        configuracion.nombre_tienda ??
+                        valoresOriginales.aparienciaNombre,
 
                     aparienciaDescripcion:
-                        aparienciaDescripcion?.value || "",
+                        configuracion.descripcion_tienda ??
+                        valoresOriginales.aparienciaDescripcion,
+
+                    logoUrl:
+                        configuracion.logo_url ??
+                        "",
 
                     colorPrincipal:
                         colorPrincipal?.value ||

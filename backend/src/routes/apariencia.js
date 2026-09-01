@@ -10,6 +10,9 @@ const verificarToken =
 const verificarAdmin =
     require("../middleware/admin");
 
+const uploadApariencia =
+    require("../middleware/uploadApariencia");
+
 
 // =====================================================
 // OBTENER CONFIGURACIÓN DE APARIENCIA
@@ -128,6 +131,7 @@ router.put(
     "/",
     verificarToken,
     verificarAdmin,
+    uploadApariencia.single("logo"),
 
     async (req, res) => {
 
@@ -143,7 +147,7 @@ router.put(
 
                 descripcion_tienda,
 
-                logo_url,
+                logo_url_actual,
 
                 color_principal,
 
@@ -171,6 +175,21 @@ router.put(
 
             } = req.body;
 
+                        // =================================================
+            // DETERMINAR LOGO
+            // =================================================
+
+            let logo_url =
+                logo_url_actual ??
+                null;
+
+
+            if (req.file) {
+
+                logo_url =
+                    `/uploads/apariencia/${req.file.filename}`;
+
+            }
 
             // =================================================
             // UPSERT
