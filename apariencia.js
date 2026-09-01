@@ -551,6 +551,76 @@ function cargarFuenteGoogle(
 
 }
 
+// =================================================
+// APLICAR ESTILO DE BOTONES
+// =================================================
+
+function aplicarEstiloBotones() {
+
+    if (!previewBoton) {
+
+        return;
+
+    }
+
+    previewBoton.classList.remove(
+        "btn-style-rounded",
+        "btn-style-soft",
+        "btn-style-square"
+    );
+
+    const estilo =
+        estiloBotones?.value || "rounded";
+
+    previewBoton.classList.add(
+        `btn-style-${estilo}`
+    );
+
+}
+
+// =================================================
+// APLICAR ESTILO DE TARJETAS
+// =================================================
+
+function aplicarEstiloTarjetas() {
+
+    const phoneScreen =
+        document.querySelector(
+            ".phone-screen"
+        );
+
+    if (!phoneScreen) {
+
+        return;
+
+    }
+
+    const tarjetas =
+        phoneScreen.querySelectorAll(
+            ".phone-product-card"
+        );
+
+    const estilo =
+        estiloTarjetas?.value || "soft";
+
+    tarjetas.forEach(
+        tarjeta => {
+
+            tarjeta.classList.remove(
+                "card-style-soft",
+                "card-style-border",
+                "card-style-shadow"
+            );
+
+            tarjeta.classList.add(
+                `card-style-${estilo}`
+            );
+
+        }
+    );
+
+}
+
 
         // =================================================
         // ACTUALIZAR VISTA PREVIA
